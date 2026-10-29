@@ -1,11 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Cloud Computing Practical</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+            padding: 50px;
+        }    .box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    button {
+        padding: 12px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
 </head>
-<body>
-    <h1>Hello, World!</h1>
+<body><div class="box">
+    <h1>Cloud Computing</h1>
+
+    <h2>Website Provisioning and Scaling</h2>
+
+    <p>Website provisioned successfully!</p>
+
+    <p id="instances">Number of Instances: 1</p>
+
+    <button onclick="scaleWebsite()">
+        Scale Website
+    </button>
+</div>
+
+<script>
+    let instances = 1;
+
+    function scaleWebsite() {
+        instances++;
+
+        document.getElementById("instances").innerHTML =
+            "Number of Instances: " + instances;
+    }
+</script>
+
 </body>
 </html>
